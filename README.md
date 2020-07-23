@@ -4,9 +4,23 @@ Practice using GKE with various features and workflows. All based on the GCP cod
 
 
 ### Orchestrate with Kubernetes
-Includes the setup, cluster, service, pod, and deployment creation, scaling, and management
+Includes steps to:
+* Create cluster
+* Create pods
+* Create services
+* Create, expose, and scale deployments
+* Configure networking between nodes
 
-* Create and expose deployments
+### Cloudrun on GKE
+Includes steps to:
+* Setup a cloudrun-enabled cluster
+* Deploy to cloudrun on GKE
+* Access the deployed service
+
+### Batch jobs on GKE
+Includes steps to:
+* Create jobs
+* Run jobs with dependencies
 
 
 ### General Setup
