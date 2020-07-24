@@ -13,5 +13,20 @@ You can also use a Job to run multiple Pods in parallel. This is the use case fo
 
 Find example job specs and explanations of them in [job-specs](job-specs)
 
-### Kubernetes Architecture
-![kubernetes cluster, from kubernetes docs](complete-kubernetes-cluster.png)
+### How to run jobs
+```
+# Create the job from a jobspec
+kubectl apply -f <job-spec-filepath>
+
+# If parallel, check the pods and list changes as they happen
+kubectl get pods --watch -o wide &
+
+# If parallel, stop getting the pods 
+pkill -f "kubectl get pods --watch -o wide"
+
+# If a single pod, get the pod status
+kubectl get pod -l job-name=<job-name>
+
+# Remove the job
+kubectl delete jobs <job-name>
+```

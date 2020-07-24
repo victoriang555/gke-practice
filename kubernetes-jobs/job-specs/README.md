@@ -7,19 +7,6 @@
 6. The .spec.template is the only required field of the .spec. the .spec.template is a pod template. It has exactly the same schema as a pod, except it is nested and does not have an apiVersion or kind. In addition to required fields for a Pod, a pod template in a Job must specify appropriate labels (see pod selector) and an appropriate restart policy. Only a RestartPolicy equal to Never or OnFailure is allowed.
 7. The .spec.selector field is optional. In almost all cases you should not specify it.
 
-Example job spec
-```
-apiVersion: batch/v1
-kind: Job
-metadata:
-  name: pi
-spec:
-  template:
-    spec:
-      containers:
-      - name: pi
-        image: perl
-        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
-      restartPolicy: Never
-  backoffLimit: 4
-  ```
+### Types of job specs included
+1. basic job spec, also [here](basic-job-spec.yaml)
+2. Parallel job spec, generate (5x10) keys generated in 5 containers. 

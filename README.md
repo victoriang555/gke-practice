@@ -3,6 +3,8 @@ Practice using GKE (Google Kubernetes Engine) with various features and workflow
 
 All based on the GCP codelabs. This includes various parts of the labs that I found most useful, in a condensed, hopefully consumable format.
 
+### Kubernetes Architecture
+![kubernetes cluster, from kubernetes docs](complete-kubernetes-cluster.png)
 
 ### Orchestrate with Kubernetes
 Includes steps to:
