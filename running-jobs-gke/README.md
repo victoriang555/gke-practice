@@ -3,7 +3,6 @@ Based on documentation to run jobs in GKE. Should not be confused with Kubernete
 https://cloud.google.com/kubernetes-engine/docs/how-to/jobs
 
 
-
 ### Setup
 In addition to the setup in the root README, you should also do the following for this kubernetes jobs
 

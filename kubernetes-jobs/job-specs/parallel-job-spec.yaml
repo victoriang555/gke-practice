@@ -10,6 +10,7 @@ spec:
   parallelism: 5
   # repeat task 10 times
   completions: 10
+  # pod template
   template:
     metadata:
       labels:

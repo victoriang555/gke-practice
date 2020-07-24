@@ -4,6 +4,7 @@ kind: Job
 metadata:
   name: pi
 spec:
+  # This is the pod template
   template:
     spec:
       containers:

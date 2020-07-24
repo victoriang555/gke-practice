@@ -12,6 +12,7 @@ A simple case is to create one Job object in order to reliably run one Pod to co
 You can also use a Job to run multiple Pods in parallel. This is the use case for Batch. See the [parallel-computation readme](parallel-computation/README.md) for ways to implement  parallel job execution.
 
 Find example job specs and explanations of them in [job-specs](job-specs)
+Learn how to create job queues in [job-queues](job-queues)
 
 ### How to run jobs
 ```

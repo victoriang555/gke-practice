@@ -6,7 +6,17 @@ All based on the GCP codelabs. This includes various parts of the labs that I fo
 ### Kubernetes Architecture
 ![kubernetes cluster, from kubernetes docs](complete-kubernetes-cluster.png)
 
-### Orchestrate with Kubernetes
+### [Kubernetes Jobs](kubernetes-jobs)
+How to use kubernetes in general, as well as some specific workflows.
+
+Includes steps to:
+* Create a job queue
+* Create jobs specs
+* Create jobs
+* Execute jobs in parallel
+
+### [Orchestrate With GKE](orchestrate-with-gke)
+The general setup for GKE
 Includes steps to:
 * Create cluster
 * Create pods
@@ -14,13 +24,14 @@ Includes steps to:
 * Create, expose, and scale deployments
 * Configure networking between nodes
 
-### Cloudrun on GKE
+### [Cloudrun on GKE](cloudrun-on-gke)
+
 Includes steps to:
 * Setup a cloudrun-enabled cluster
 * Deploy to cloudrun on GKE
 * Access the deployed service
 
-### Batch jobs on GKE
+### [Batch jobs on GKE](batch-jobs-on-gke)
 Includes steps to:
 * Create jobs
 * Run jobs with dependencies
