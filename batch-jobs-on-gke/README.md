@@ -5,6 +5,8 @@ Repo: https://github.com/GoogleCloudPlatform/Kbatch.git
 
 NOTE: Batch on GKE is in beta, I requested access to the beta, but probably won't be granted. 
 
+WIP
+
 ### Submit jobs
 There are two ways to submit jobs in Batch: ksub and kubectl. The ksub command can submit shell scripts as jobs, and kubectl can submit jobs using yaml files.
 

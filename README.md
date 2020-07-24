@@ -1,6 +1,7 @@
 ## Overview
-Practice using GKE with various features and workflows. All based on the GCP codelabs. This includes various parts of the labs that I found most useful, in a condensed, hopefully consumable format.
+Practice using GKE (Google Kubernetes Engine) with various features and workflows. From the perspective of a developer, meaning this excludes most devops workflows. 
 
+All based on the GCP codelabs. This includes various parts of the labs that I found most useful, in a condensed, hopefully consumable format.
 
 
 ### Orchestrate with Kubernetes
