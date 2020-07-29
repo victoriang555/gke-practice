@@ -14,13 +14,20 @@ All based on the GCP codelabs. This includes various parts of the labs that I fo
 I recommend going in the order listed below, but they're completely separate workflows, so you can go in any order you want. 
 
 ### [Kubernetes Jobs](kubernetes-jobs)
-How to use kubernetes in general, as well as some specific workflows.
+How to use kubernetes jobs in general, as well as some specific workflows.
 
 Includes steps to:
 * Create a job queue
 * Create jobs specs
 * Create jobs
 * Execute jobs in parallel
+
+### [Running-jobs-GKE](running-jobs-gke)
+Run jobs (in Kubernetes, called job objects) in GKE. In GKE, a Job is a controller object that represents a finite task. You can use a Job to run independent but related work items in parallel: sending emails, rendering frames, transcoding files, scanning database keys, etc. However, Jobs are not designed for closely-communicating parallel processes such as continuous streams of background processes.
+
+Includes steps to:
+* A simple example of running a job without much setup
+* A more complicated example of creating and running a job
 
 ### [Orchestrate With GKE](orchestrate-with-gke)
 The general setup for GKE
@@ -44,7 +51,7 @@ Includes steps to:
 * Roll out an upgrade to the service
 
 ### [Cloudrun on GKE](cloudrun-on-gke)
-Deploy cloudrun on GKE
+Deploy cloudrun on GKE. WIP
 
 Includes steps to:
 * Setup a cloudrun-enabled cluster
@@ -52,7 +59,7 @@ Includes steps to:
 * Access the deployed service
 
 ### [Batch jobs on GKE](batch-jobs-on-gke)
-Beta workflow for batch jobs in GKE
+Workflow for batch jobs in GKE. Currently in closed Beta
 
 Includes steps to:
 * Create jobs
