@@ -1,7 +1,7 @@
 # Run a Nodejs container in GKE
 Based on codelabs https://codelabs.developers.google.com/codelabs/cloud-running-a-nodejs-container/index.html?index=..%2F..index#1 and https://codelabs.developers.google.com/codelabs/cloud-hello-kubernetes/index.html?index=..%2F..index#5
 
-The a copy of the application code is in [containerengine](containerengine)
+A copy of the nodejs application is in [containerengine](containerengine)
 
 ### How to run
 Run the commands in [nodejs-container.sh](nodejs-container.sh)

@@ -2,6 +2,7 @@
 # Need to have run the general setup steps in the root readme
 # The name of the cluster we're referencing in this practice is "hello-world"
 # If running locally, set your project id variable
+# If running in CloudShell, they saved the project id in this variable already
 export DEVSHELL_PROJECT_ID = <YOUR-GOOGLE-PROJECT-ID>
 
 #### GET THE CODE ####
@@ -9,8 +10,7 @@ git clone https://github.com/GoogleCloudPlatform/nodejs-docs-samples.git
 cd nodejs-docs-samples/containerengine/hello-world/
 
 #### BUILD THE CONTAINER ####
-# They saved the project id in a local variable
-docker build -t gcr.io/$DEVSHELL_PROJECT_ID/hello-node:1.0 .
+docker build -t gcr.io/$DEVSHELL_PROJECT_ID/hello-node:v1 .
 
 #### PUBLISH THE CONTAINER ####
 # First, set up Docker to push to Google Container Registry
