@@ -50,6 +50,11 @@ Includes steps to:
 * Scale up the service
 * Roll out an upgrade to the service
 
+### [Control Tower with GCP](control-tower-with-gcp)
+Use concourse CI (via Control Tower) with GCP
+
+
+
 ### [Cloudrun on GKE](cloudrun-on-gke)
 Deploy cloudrun on GKE. WIP
 
