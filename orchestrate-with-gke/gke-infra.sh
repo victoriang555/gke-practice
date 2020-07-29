@@ -1,22 +1,9 @@
 ## GCP codelab 
 
 #### SETUP ####
-# NOTE: if you already did the setup in the main directory README, you can skip this section
-# Get the Google Cloud accounts
-gcloud auth list
-
-# Get the list of projects
-gcloud config list project
-
-# Set the project, if not automatically set
-gcloud config set project <PROJECT_ID>
-
-# Set the default zone
-gcloud config set compute/zone us-central1-f
-
-#### CLUSTER #####
-# Start up a cluster
-gcloud container clusters create codelab
+# Make sure you've done all the setup in the root readme
+# If you have, you should have a project and cluster setup
+# We want the cluster for this practice to be named "codelab"
 
 #### GET CODE ####
 git clone https://github.com/googlecodelabs/orchestrate-with-kubernetes.git
