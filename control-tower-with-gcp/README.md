@@ -1,6 +1,8 @@
 # Control Tower with GCP (WIP)
 Easily run ConcourseCI in GCP. This workflow is based off documentation from https://concourse-ci.org/quick-start.html and https://github.com/EngineerBetter/control-tower/tree/0.12.2 and https://blog.alterway.fr/en/building-a-continious-deployment-pipeline-with-kubernetes-and-concourse-ci.html and https://github.com/concourse/hush-house and https://www.engineerbetter.com/blog/concourse-up-gcp/
 
+Find example workflows for concourse-ci [here](concourse-ci)
+
 ## What Control Tower Does
 control-tower first creates an S3 or GCS bucket to store its own configuration and saves a config.json file there.
 
@@ -42,7 +44,9 @@ By default, control-tower deploys to the AWS eu-west-1 (Ireland) region or the G
 
 3. Download the latest release of Control Tower
 
-More info: https://github.com/EngineerBetter/control-tower/blob/master/docs/prerequisites.md
+4. Get the fly cli setup https://concourse-ci.org/fly.html 
+
+5. Get your Concourse CI docker up and running. Basic instructions [here](concourse-ci/concourse-quickstart.sh)
 
 ## Running
 ```
@@ -50,3 +54,5 @@ GOOGLE_APPLICATION_CREDENTIALS=<path/to/googlecreds.json> \
   control-tower deploy --iaas gcp <your-project-name>
 ```
 
+## Resources
+1. https://github.com/EngineerBetter/control-tower/blob/master/docs/prerequisites.md
