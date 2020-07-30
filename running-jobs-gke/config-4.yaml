@@ -4,11 +4,11 @@ metadata:
   # Unique key of the Job instance
   name: example-job
 spec:
+  activeDeadlineSeconds: 100
   template:
     metadata:
       name: example-job
     spec:
-      activeDeadlineSeconds: 100
       containers:
       - name: pi
         image: perl

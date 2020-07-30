@@ -53,6 +53,10 @@ Includes steps to:
 ### [Control Tower with GCP](control-tower-with-gcp)
 Use concourse CI (via Control Tower) with GCP
 
+### [Redis Work Queue](redis-work-queue)
+Use Redis to store the work items for the queue. Run a Kubernetes Job with multiple parallel worker processes in a given pod. Each pod is created, it picks up one unit of work from a task queue, processes it, and repeats until the end of the queue is reached.
+
+
 
 
 ### [Cloudrun on GKE](cloudrun-on-gke)

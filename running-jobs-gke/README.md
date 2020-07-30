@@ -26,6 +26,41 @@ By default, a Job runs uninterrupted unless there is a failure, at which point t
 
 For example, in our example job, we set the number of retries to 4
 
+### Pod Replacement - no config
+Pod replacement
+Job recreates Pods honoring the backoffLimit when the current Pod is considered failed in scenarios such as:
+
+The Pod container exits with a non-zero error code.
+When a Node is rebooted, the kubelet may mark the Pod as Failed after the reboot
+Under certain scenarios a Job that has not completed replaces the Pod without considering the backoffLimit, such as:
+
+Manually killing a Pod would not set the Pod phase to Failed. The replacement Pod may be created even before the current pod's termination grace period is completed.
+When a Node is drained (manually or during auto-upgrade), the Pod is terminated honoring a drain grace period and is replaced.
+When a Node is deleted, the Pod is garbage collected (marked as deleted) and is replaced.
+
+### [Specifying a deadline](config-4.yaml)
+By default, a Job creates new Pods forever if its Pods fail continuously. If you prefer not to have a Job retry forever, you can specify a deadline value using the optional activeDeadlineSeconds field.
+
+A deadline grants a Job a specific amount of time, in seconds, to complete its tasks successfully before terminating.
+
+To specify a deadline, add the activeDeadlineSeconds value to the Job's spec field in the manifest file. For example, the linked configuration specifies that the Job has 100 seconds to complete successfully.
+
+Note: Ensure that you add the activeDeadlineSecond value to the Job's spec field. The spec field in the Pod template field also accepts an activeDeadlineSeconds value.
+
+If a Job does not complete successfully before the deadline, the Job ends with the status DeadlineExceeded. This causes creation of Pods to stop and causes existing Pods to be deleted.
+
+### [Specifying a Pod selector]
+Manually specifying a selector is useful if you want to update a Job's Pod template, but you want the Job's current Pods to run under the updated Job.
+
+A Job is instantiated with a selector field. The selector generates a unique identifier for the Job's Pods. The generated ID does not overlap with any other Jobs. Generally, you would not set this field yourself: setting a selector value which overlaps with another Job can cause issues with Pods in the other Job. To set the field yourself, you must specify manualSelector: True in the Job's spec field.
+
+For example, you can run kubectl get job my-job --output=yaml to see the Job's specification, which contains the selector generated for its Pods: [config-with-selectors](config-5.yaml)
+
+When you create a new Job, you can set the manualSelector value to True, then set the selector field's job-uid value like the following: [config-with-manual-selector](config-6.yaml)
+
+Pods created by my-new-job use the previous Pod UID.
+Note: Jobs have their own UIDs. The new Job's UID is different from the previous Job's UID.
+
 ### Notes on jobs
 Learn more about job specs [here](/kubernetes-jobs/job-specs)
 

@@ -1,14 +1,18 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  # Unique key of the Job instance
-  name: example-job
+  name: my-new-job
 spec:
+  manualSelector: true
+  completions: 1
+  parallelism: 1
+  selector:
+    matchLabels:
+      job-uid: a8f3d00d-c6d2-11e5-9f87-42010af00002
   template:
     metadata:
-      name: example-job
+      name: example-job-3
     spec:
-      activeDeadlineSeconds: 100
       containers:
       - name: pi
         image: perl
