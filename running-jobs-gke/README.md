@@ -26,7 +26,7 @@ By default, a Job runs uninterrupted unless there is a failure, at which point t
 
 For example, in our example job, we set the number of retries to 4
 
-### Pod Replacement - no config
+### Pod Replacement - no config, just notes
 Pod replacement
 Job recreates Pods honoring the backoffLimit when the current Pod is considered failed in scenarios such as:
 
@@ -49,7 +49,7 @@ Note: Ensure that you add the activeDeadlineSecond value to the Job's spec field
 
 If a Job does not complete successfully before the deadline, the Job ends with the status DeadlineExceeded. This causes creation of Pods to stop and causes existing Pods to be deleted.
 
-### [Specifying a Pod selector]
+### Specifying a Pod selector
 Manually specifying a selector is useful if you want to update a Job's Pod template, but you want the Job's current Pods to run under the updated Job.
 
 A Job is instantiated with a selector field. The selector generates a unique identifier for the Job's Pods. The generated ID does not overlap with any other Jobs. Generally, you would not set this field yourself: setting a selector value which overlaps with another Job can cause issues with Pods in the other Job. To set the field yourself, you must specify manualSelector: True in the Job's spec field.

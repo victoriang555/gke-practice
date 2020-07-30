@@ -1,7 +1,7 @@
 # Overview
 Practice using GKE (Google Kubernetes Engine) with various features and workflows. From the perspective of a developer, meaning this excludes most devops workflows. 
 
-All based on the GCP codelabs. This includes various parts of the labs that I found most useful, in a condensed, hopefully consumable format.
+Based on the GCP codelabs, Kubernetes, ConcourseCI, redis,and general GCP documentation. This includes various parts of the labs/docs that I found most useful, in a condensed, hopefully consumable format.
 
 ## General Setup
 1. Setup the google cloud sdk (if you want to run in your local terminal) https://cloud.google.com/sdk/docs/downloads-interactive
@@ -28,6 +28,13 @@ Run jobs (in Kubernetes, called job objects) in GKE. In GKE, a Job is a controll
 Includes steps to:
 * A simple example of running a job without much setup
 * A more complicated example of creating and running a job
+* Explanation and associated config file for the following configs:
+    * Multiple pods config
+    * Concurrent pod running, true parallelism config
+    * Retries config
+    * Pod Replacement
+    * Specifying a deadline
+    * Specifying a Pod selector
 
 ### [Orchestrate With GKE](orchestrate-with-gke)
 The general setup for GKE
@@ -50,16 +57,13 @@ Includes steps to:
 * Scale up the service
 * Roll out an upgrade to the service
 
-### [Control Tower with GCP](control-tower-with-gcp)
+### [Control Tower with GCP WIP](control-tower-with-gcp)
 Use concourse CI (via Control Tower) with GCP
 
-### [Redis Work Queue](redis-work-queue)
+### [Redis Work Queue WIP](redis-work-queue)
 Use Redis to store the work items for the queue. Run a Kubernetes Job with multiple parallel worker processes in a given pod. Each pod is created, it picks up one unit of work from a task queue, processes it, and repeats until the end of the queue is reached.
 
-
-
-
-### [Cloudrun on GKE](cloudrun-on-gke)
+### [Cloudrun on GKE WIP](cloudrun-on-gke)
 Deploy cloudrun on GKE. WIP
 
 Includes steps to:
