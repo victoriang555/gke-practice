@@ -22,8 +22,7 @@ docker push gcr.io/$DEVSHELL_PROJECT_ID/hello-node:v1
 # create a Deployment that manages a Pod. 
 # The Pod runs a Container based on the provided Docker image
 kubectl create deployment hello-node \
-    --image=gcr.io/$DEVSHELL_PROJECT_ID/hello-node:v1 \
-    --port=8080
+    --image=gcr.io/$DEVSHELL_PROJECT_ID/hello-node:v1
 # Check the deployment
 kubectl get deployments
 # View the pod created by the deployment
